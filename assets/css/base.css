@@ -1,0 +1,71 @@
+:root{
+    --primary-color: #131842;
+    --second-color: #E68369;
+    --third-color: #ECCEAE;
+    --fouth-color:#FBF6E2;
+    --white-color: #ffffff;
+    --height1: 70px;
+}
+html
+{
+    height: 4000px;
+}
+/* Header */
+#header
+{
+    height: 570px;
+    width: 100%;
+    background-color: red;
+    
+}
+
+.navbar1
+{
+   
+}
+
+.navbar1 a {
+   
+}
+
+.navbar1 a:hover {
+    
+}
+
+.navbar1 img {
+   
+}  
+
+.navbar1.dropdown {
+    
+}   
+
+.navbar1.dropdown-content {     
+   
+}
+
+.navbar1.dropdown:hover.dropdown-content {
+    
+}
+
+.navbar1.dropdown-content a {
+   
+}
+
+.navbar1.dropdown-content a:hover {
+    
+}
+
+
+
+
+
+.nav-link1 {
+   
+}
+.nav-link1:hover, .nav-link1:focus {
+   
+  }
+
+
+/* */
