@@ -1,0 +1,116 @@
+/* navbar */
+.navbar-logo
+{
+    padding-left: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.menu2
+{
+    padding: 10px;
+}
+
+.navbar ul li
+{
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+    flex: 1;
+    display: inline-block;
+    
+    
+}
+.nav-link1 {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: var(--white);
+    
+  }
+  
+  .nav-link1:hover, .nav-link1:focus {
+    text-decoration: none;
+  }
+  
+  .nav-link1.disabled {
+    color: #6c757d;
+  }
+
+
+/*  */
+
+/* Slide bar */
+
+#caroussel{
+    height: 500px;
+    margin: auto;
+    position: relative;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+
+.img-caroussel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: inherit;
+    transition: opacity .5s;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    margin-top: 70px;
+}
+
+
+.img-caroussel.active{
+    opacity: 1;
+
+}
+
+.slider-position .round{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    border: white solid 1px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.5s;
+}
+
+
+.slider-position .round.active{
+    background-color: white;
+}
+
+
+.slider-position .round:hover{
+    background-color: white;
+}
+
+.slider-position .round:last-child{
+    margin: 0;
+}
+
+
+.slider-position{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.credit{
+    background-color: rgba(228, 214, 214, 0.7) ;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 200;
+    border-bottom-right-radius: 10px ;
+}
+/*  */
