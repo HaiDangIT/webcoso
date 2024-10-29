@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- header -->
+        <header id="header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+            <!-- slide bar -->
+            <section id="slide_bar">
+                <div id="caroussel">
+                    <!-- Các ảnh trong slider -->
+                    <div class="img-caroussel active" data-img="1" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="img-caroussel" data-img="2" style="background-image: url('https://images.unsplash.com/photo-1514897575457-c4db467cf78e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="img-caroussel" data-img="3" style="background-image: url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="img-caroussel" data-img="4" style="background-image: url('https://images.unsplash.com/photo-1532079890557-10d83624b9de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            
+                    <!-- Vòng tròn vị trí ảnh -->
+                    <div class="slider-position">
+                        <span class="round active" data-img="1"></span>
+                        <span class="round" data-img="2"></span>
+                        <span class="round" data-img="3"></span>
+                        <span class="round" data-img="4"></span>
+                    </div>
+                </div>
+            </section>
+            
+            <script>
+                const img_slider_elements = document.querySelectorAll(".img-caroussel");
+                const round_elts = document.querySelectorAll(".round");
+            
+                let current_img = 1;
+                let interval;
+
+                // Khởi tạo slider tự động chạy
+                function startAutoSlide() {
+
+                    if (interval) return;
+                    
+                    function autoSlide() {
+                        change_img_slider("next"); // Chuyển ảnh
+                        interval = setTimeout(autoSlide, 10000); // Gọi lại sau 10 giây
+                    }
+                    autoSlide(); // Khởi động lần đầu
+                }
+
+                // Dừng slider khi người dùng kéo
+                function stopAutoSlide() {
+                    clearInterval(interval);
+                }
+
+                // Khởi động slider
+                startAutoSlide();
+                
+                // Sự kiện để dừng slider khi kéo
+                let startX = 0;
+                let isDragging = false;
+            
+                // Sự kiện kéo cho slide
+                document.getElementById("caroussel").addEventListener("mousedown", (e) => startDrag(e));
+                document.getElementById("caroussel").addEventListener("touchstart", (e) => startDrag(e.touches[0]));
+            
+                document.getElementById("caroussel").addEventListener("mousemove", (e) => dragAction(e));
+                document.getElementById("caroussel").addEventListener("touchmove", (e) => dragAction(e.touches[0]));
+            
+                document.getElementById("caroussel").addEventListener("mouseup", endDrag);
+                document.getElementById("caroussel").addEventListener("mouseleave", endDrag);
+                document.getElementById("caroussel").addEventListener("touchend", endDrag);
+            
+                function startDrag(e) {
+                    isDragging = true;
+                    startX = e.clientX;
+                    stopAutoSlide();
+                }
+            
+                function dragAction(e) {
+                    if (!isDragging) return;
+                    const endX = e.clientX;
+            
+                    if (endX - startX > 50) { // Kéo sang phải
+                        change_img_slider("previous");
+                        isDragging = false; 
+                    } else if (startX - endX > 50) { // Kéo sang trái
+                        change_img_slider("next");
+                        isDragging = false;
+                    }
+                }
+            
+                function endDrag() {
+                    isDragging = false;
+                    startAutoSlide();
+                }
+            
+                function change_img_slider(direction) {
+                    let index_img_to_show = null;
+            
+                    if (direction === "previous") {
+                        index_img_to_show = parseInt(current_img) - 1 < 1 ? img_slider_elements.length : parseInt(current_img) - 1;
+                    } else if (direction === "next") {
+                        index_img_to_show = parseInt(current_img) + 1 > img_slider_elements.length ? 1 : parseInt(current_img) + 1;
+                    }
+            
+                    img_slider_elements.forEach((img) => {
+                        img.classList.remove("active");
+                        if (img.getAttribute("data-img") == index_img_to_show) {
+                            current_img = img.getAttribute("data-img");
+                            img.classList.add("active");
+                        }
+                    });
+            
+                    round_elts.forEach((round_elt) => {
+                        round_elt.classList.remove("active");
+                        if (round_elt.getAttribute("data-img") == index_img_to_show) {
+                            round_elt.classList.add("active");
+                        }
+                    });
+                }
+            </script>
+            
+             <!-- slide bar -->
+        </header>
+        <!-- header -->
+
+
+        <!-- body -->
+         <main id="main">
+
+         </main>
+        <!-- body -->
+
+        <!-- footer -->
+        <footer id="footer">
+
+        </footer>
+        <!-- footer -->
+        <script src="./assets/js/main.js"></script>
+    </div>
+    
+</body>
+
+</html> 
+
+

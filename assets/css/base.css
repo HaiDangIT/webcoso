@@ -1,0 +1,83 @@
+:root{
+    --primary-color: #131842;
+    --second-color: #E68369;
+    --third-color: #ECCEAE;
+    --fouth-color:#FBF6E2;
+    --white-color: #ffffff;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#caroussel{
+    height: 500px;
+    margin: auto;
+    position: relative;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+
+.img-caroussel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: inherit;
+    transition: opacity .5s;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+
+.img-caroussel.active{
+    opacity: 1;
+
+}
+
+.slider-position .round{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    border: white solid 1px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.5s;
+}
+
+
+.slider-position .round.active{
+    background-color: white;
+}
+
+
+.slider-position .round:hover{
+    background-color: white;
+}
+
+.slider-position .round:last-child{
+    margin: 0;
+}
+
+
+.slider-position{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.credit{
+    background-color: rgba(228, 214, 214, 0.7) ;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 200;
+    border-bottom-right-radius: 10px ;
+}
