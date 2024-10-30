@@ -34,6 +34,7 @@ label{
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
+	padding-top: 20px;
 }
 input{
 	width: 60%;
@@ -47,6 +48,31 @@ input{
 	outline: none;
 	border-radius: 5px;
 }
+
+/* .playdangnhap
+{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #E68369;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 30px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+}
+.playdangnhap:hover
+{
+	background: #ECCEAE;
+} */
 button{
 	width: 60%;
 	height: 40px;
@@ -63,6 +89,7 @@ button{
 	border-radius: 5px;
 	transition: .2s ease-in;
 	cursor: pointer;
+	
 }
 button:hover{
 	background: #ECCEAE;

@@ -38,7 +38,7 @@ html {
     -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: transparent;
-    height: 5000px;
+   
   }
 
 body {
@@ -88,6 +88,6 @@ body {
     display: none;
 }
 #footer {
-  margin: 0px;
+  margin: 0;
 }
 

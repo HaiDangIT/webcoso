@@ -16,33 +16,34 @@
     <div class="body1">
         <!-- header -->
         <header id="header">
-            <div class="navbar">
-                <div class="container">
-                    <a class="navbar_logo" href="#">
-                        <img class="navbar_logo-img"
-                            src="./logo/DALL·E 2024-10-29 09.30.24 - Create a modern, circular logo for a company named '3Tech'. The logo should have a sleek, high-tech look with a round shape, using shades of blue and .webp"
-                            alt="Logo">
+            <div class="header-navbar">
+                <div class="container d-flex my-2">
+                    <a class="navbar_logo d-inline-block" href="#">
+                        <img class="navbar_logo-img" src="./logo/logo_01.png" alt="Logo">
                     </a>
 
-                    <div class="nav-categories">
-                        <a class="nav-link" href="#">
-                            <i class="nav-icon fa-solid fa-bars"></i>
-                            Danh Mục
-                        </a>
+                    <div class="nav-categories-with-search d-inline-block d-flex">
+                        <div class="nav-categories  ">
+                            <a class="nav-link nav-submenu-open" href="#">
+                                <i class="nav-icon fa-solid fa-bars"></i>
+                                Danh Mục
+                            </a>
+
+                        </div>
+
+                        <div class="nav-research-products">
+                            <a class="nav-link" href="./Contact.html">
+                                <i class="fa-solid fa-phone"></i>
+                                Hỗ trợ
+                            </a>
+                        </div>
+
+                        <div class="navbar-search-wrap">
+                            <input class="navbar-search-input" type="text" placeholder="Bạn cần tìm kiếm gì?">
+                        </div>
                     </div>
 
-                    <div class="nav-research-products">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-phone"></i>
-                            Liên hệ
-                        </a>
-                    </div>
-
-                    <div class="navbar-search-wrap">
-                        <input class="navbar-search-input" type="text" placeholder="Bạn cần tìm kiếm gì?">
-                    </div>
-
-                    <div class="menu2">
+                    <div class="menu2 d-inline-block">
                         <ul class="navbar-nav1">
                             <li class="nav-item1">
                                 <a class="nav-link" href="#">
@@ -54,7 +55,7 @@
                             <li class="nav-item1">
                                 <a class="nav-link" href="#">
                                     <i class="fa-solid fa-cart-shopping"></i>
-                                    Sản Phẩm
+                                    Giỏ hàng
                                 </a>
                             </li>
                             <li class="nav-item1">
@@ -64,6 +65,59 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+                <div class="nav-categories-submenu nav-submenu-active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3">
+                                <ul class="submenu-lists">
+                                    <li style="color: #999;" class="submenu-lists-item">Mua hàng</li>
+                                    <li class="submenu-lists-item">
+                                        <a href="#">Laptop</a>
+                                    </li>
+                                    <li class="submenu-lists-item">
+                                        <a href="#">PC</a>
+                                    </li>
+                                    <li class="submenu-lists-item">
+                                        <a href="#">Màn hình</a>
+                                    </li>
+                                    <li class="submenu-lists-item">
+                                        <a href="#">Bàn phím</a>
+                                    </li>
+                                    <li class="submenu-lists-item">
+                                        <a href="#">Chuột</a>
+                                    </li>
+                                    <li class="submenu-lists-item">
+                                        <a href="#">Phụ kiện</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-9 d-flex">
+                                <div class="col-3">
+                                    <ul class="submenu-lists">
+                                        <li style="color: #999;" class="submenu-lists-item">Liên kết nhanh</li>
+                                        <li style="color: var(--white-color); list-style: none; margin-bottom: 14px;">
+                                            <a style="font-weight: 400; font-size: 16px;" href="#">Tình trạng đơn hàng</a>
+                                        </li>
+                                        <li style="color: var(--white-color); list-style: none; margin-bottom: 14px;">
+                                            <a style="font-weight: 400; font-size: 16px;" href="#">Tài chính</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="submenu-lists">
+                                        <li style="color: #999;" class="submenu-lists-item">Chính sách và giáo dục</li>
+                                        <li style="color: var(--white-color); list-style: none; margin-bottom: 14px;">
+                                            <a style="font-weight: 400; font-size: 16px;" href="#">Giáo dục</a>
+                                        </li>
+                                        <li style="color: var(--white-color); list-style: none; margin-bottom: 14px;">
+                                            <a style="font-weight: 400; font-size: 16px;" href="#">Doanh nghiệp</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -774,8 +828,8 @@
     </div>
           <!-- BLOG CONG NGHE -->
           <div class="blogcongnghe">
-            <div class="container">
-            <h1>BLOG CÔNG NGHỆ </h1>
+            <div class="container containerblog">
+            <h1 >BLOG CÔNG NGHỆ </h1>
             <div class="row">
               <div class="col-3 ">
                 <div class="product_info">
@@ -846,8 +900,9 @@
                 </div>
               </div>
           </div>
+          <h1 class="h1bogcongnghe"></h1>
         </div>
-        </div>
+    </div>
     </div>
     </div>
         <!-- BLOG CONG NGHE -->
