@@ -1,0 +1,270 @@
+/* navbar */
+.navbar
+{
+    display: flex;
+    position: fixed;
+    background-color: var(--primary-color);
+    height: var(--height1);
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-logo
+{
+    padding-left: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.menu2
+{
+    padding: 10px;
+    text-align: center;
+}
+.navbar_logo{
+    --size-height-img: 40px;
+    height: var(--size-height-img);
+    /* width: var(--size-width-img); */
+   
+}
+.nav-link {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: var(--white);
+}
+.navbar ul li
+{
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+    flex: 1;
+    display: inline-block;
+    
+    
+}
+
+.navbar_logo-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 6px;
+}
+.navbar-search-wrap{
+    width: 300px;
+}
+.navbar-search-input{
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+}
+.nav-link:hover{
+    color: var(--second-color);
+}
+.nav-item1-categories{
+    margin-right: 10px;
+}
+.navbar-nav1{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+
+/*  */
+
+/* Slide bar */
+
+#caroussel{
+    height: 500px;
+    margin: auto;
+    position: relative;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+
+.img-caroussel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: inherit;
+    transition: opacity .5s;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+
+.img-caroussel.active{
+    opacity: 1;
+
+}
+
+.slider-position .round{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    border: white solid 1px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.5s;
+}
+
+
+.slider-position .round.active{
+    background-color: white;
+}
+
+
+.slider-position .round:hover{
+    background-color: white;
+}
+
+.slider-position .round:last-child{
+    margin: 0;
+}
+
+
+.slider-position{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.credit{
+    background-color: rgba(228, 214, 214, 0.7) ;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 200;
+    border-bottom-right-radius: 10px ;
+}
+/*  */
+
+/* Body page */
+
+#main-body {
+    min-height: calc(100vh - 600px);
+    padding: 5px 10px;
+}
+#main {
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+}
+
+/*  */
+
+/* container {san pham noi bat}*/
+
+.container1 h1
+{
+    display: block;
+   text-align: center;
+   padding: 25px 0;
+}
+.row
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+
+}
+/* .col-3-css
+{
+    display: flex;
+    flex-flow: column;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    min-height: 202px;
+    padding: 10px;
+    position: relative;
+    width: auto;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+} */
+.col-3 .product_info
+{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    min-height: 202px;
+    padding: 16px;
+    position: relative;
+    width: auto;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+}
+
+.product_info .product_img
+{
+    text-align: center;
+    width: 100%;
+    
+}
+
+.product_img1
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* BLOG CONG NGHE */
+
+.blogcongnghe
+{
+    background-color: #ECCEAE;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+/*  */
+
+/* footer - start */
+.footer-container {
+    color: var(--fouth-color); 
+    background-color: var(--primary-color);
+}
+.footer-information {
+    display: flex; /* Sử dụng Flexbox */
+    flex-wrap: wrap; /* Cho phép cột xuống hàng nếu không đủ chỗ */
+    justify-content: space-between; /* Tạo khoảng cách giữa các cột */
+}
+
+.footer-section {
+    flex: 1; /* Mỗi cột chiếm đều không gian */
+    min-width: 200px; /* Đặt chiều rộng tối thiểu cho cột */
+    margin: 10px; /* Khoảng cách giữa các cột */
+    padding: 10px; /* Khoảng cách bên trong */
+    box-sizing: border-box; /* Để padding và border không ảnh hưởng đến chiều rộng */
+}
+
+.footer-bottom>p{
+    text-align: center; 
+    margin: 0px;
+    color: var(--fouth-color)
+}
+
+.fab{
+    color: var(--fouth-color);
+    font-size: 25px;
+    margin: 0 5px;
+}
+/* footer - end */
