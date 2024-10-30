@@ -38,7 +38,7 @@ html {
     -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: transparent;
-    height: 1000px;
+    height: 5000px;
   }
 
 body {
@@ -82,11 +82,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
     background-color: rgba(0,0,0,0.5);
     border-radius: 50%;
     cursor: pointer;
     display: none;
+}
+#footer {
+  margin: 0px;
 }
 
